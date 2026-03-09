@@ -11,7 +11,9 @@ public class ClientRepository implements IClientRepository {
 
     private ClientRepository() {
         clients = new ArrayList<>();
-        addInitialClients();
+    }
+
+    private void addInitialClients() {
     }
 
     public static ClientRepository getClientRepository() {
