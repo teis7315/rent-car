@@ -74,13 +74,6 @@ public class ClientRepository implements IClientRepository {
         clients = new ArrayList<>();
     }
 
-    public void addInitialClients(){
-        add(new Client("87896685P", "Sergio", "Rodríguez"));
-        add(new Client("99687554K", "Aurelio", "Fernández"));
-        add(new Client("12345678A", "María", "González"));
-        add(new Client("56789012B", "Lucía", "López"));
-        add(new Client("34567890C", "Carlos", "Martínez"));
-        add(new Client("78901234D", "Ana", "Sánchez"));
-    }
+
 
 }

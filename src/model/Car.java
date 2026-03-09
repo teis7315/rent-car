@@ -1,0 +1,63 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Car {
+    private Long id;
+    private String licensePlate;
+    Model model;
+    RentalOffice rentalOffice;
+    ArrayList<Rental> rentals;
+
+    public Car(Long id, String licensePlate, Model model, RentalOffice rentalOffice, ArrayList<Rental> rentals) {
+        this.id = id;
+        this.licensePlate = licensePlate;
+        this.model = model;
+        this.rentalOffice = rentalOffice;
+        this.rentals = rentals;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
+
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public RentalOffice getRentalOffice() {
+        return rentalOffice;
+    }
+
+    public void setRentalOffice(RentalOffice rentalOffice) {
+        this.rentalOffice = rentalOffice;
+    }
+
+    public ArrayList<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(ArrayList<Rental> rentals) {
+        this.rentals = rentals;
+    }
+
+    public int getPricePerDay(){
+        return model.getPricePerDay();
+    }
+}

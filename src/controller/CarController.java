@@ -1,18 +1,18 @@
 package controller;
 import model.Car;
 import service.CarServiceImpl;
-import service.IClientService;
+import service.ICarService;
 import java.util.ArrayList;
-public class ClientController {
+public class CarController {
 
-    private IClientService service;
-    public ClientController() {
-        service = new ClientServiceImpl();
+    private ICarService service;
+    public CarController() {
+        service = new CarServiceImpl();
     }
 
     public void add(String dni, String name, String surname){
-        Client client = new Client(dni, name, surname);
-        service.add(client);
+        Car car = new Car(dni, name, surname);
+        service.add(car);
 
     }
 
@@ -25,13 +25,13 @@ public class ClientController {
         return service.findAll();
     }
 
-    public Client findByDni(String dni){
+    public Car findByDni(String dni){
         return service.findByDni(dni);
     }
 
     public void update(Long id, String dni, String name, String surname){
-        Client client = new Client(id, dni, name, surname);
-        service.update(client);
+        Car car = new Car(id, dni, name, surname);
+        service.update(car);
     }
 
 
